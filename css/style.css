@@ -138,3 +138,25 @@ footer {
    YOUR STYLES
    Write your own rules below this line.
    --------------------------------------------------------------------- */
+
+
+   .chapter-full {
+  position: relative;       /* the text is placed inside this box */
+  height: 100svh;           /* one full screen, like your cover */
+}
+.chapter-full video,
+.chapter-full img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fill the box, crop the edges, never stretch */
+}
+.chapter-full-text {
+  position: absolute;       /* sits on top of the video */
+  bottom: 4rem;             /* clear of the video's controls */
+  left: 2rem;
+  right: 2rem;
+  max-width: 26rem;
+  padding: 1rem 1.5rem;
+  background: var(--paper); /* or the words vanish into the picture */
+}
